@@ -7,8 +7,8 @@ import (
 	"os"
 	"os/signal"
 
-	vegeta "github.com/tsenart/vegeta/v12/lib"
-	"github.com/tsenart/vegeta/v12/lib/plot"
+	vegeta "github.com/meritopensource/vegeta/v12/lib"
+	"github.com/meritopensource/vegeta/v12/lib/plot"
 )
 
 const plotUsage = `Usage: vegeta plot [options] [<file>...]
@@ -47,7 +47,7 @@ func plotCmd() command {
 	output := fs.String("output", "stdout", "Output file")
 
 	fs.Usage = func() {
-		fmt.Fprintln(os.Stderr, plotUsage)
+		fmt.Fprint(os.Stderr, plotUsage)
 	}
 
 	return command{fs, func(args []string) error {

@@ -9,7 +9,7 @@ import (
 
 	bmizerany "github.com/bmizerany/perks/quantile"
 	gk "github.com/dgryski/go-gk"
-	streadway "github.com/streadway/quantile"
+	streadway "github.com/meritopensource/quantile"
 )
 
 func TestMetrics_Add(t *testing.T) {
